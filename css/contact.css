@@ -1,0 +1,68 @@
+section#contact {
+    background-color: var(--darkblue);
+    padding: 0;
+}
+
+section#contact iframe {
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  overflow: hidden;
+    opacity: 70%;
+}
+
+#contact form textarea, #contact form input{
+    width: 95%;
+    padding:.5rem;
+    margin-top:1rem;
+    border-radius:.2rem;
+    border: 1px solid #CCC;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+
+
+#contact form{
+  width: calc(100% - 2rem);
+  background-color: #ffffff;
+  padding:1rem;
+  margin-block-end: 0;
+}
+
+#contact h2 {
+    text-align: left;
+}
+
+#contact h4 {
+    font-weight: bold;
+    margin: 0;
+    color:#626262;
+}
+
+#contact address {
+    font-style: normal;
+    color:#626262;
+}
+
+#contact a {
+    color:#626262;
+    text-decoration:none;
+}
+
+@media all and (min-width: 1024px) {   
+  #contact  {
+    
+    height: 100vh;
+    overflow: hidden;
+  } 
+
+  #contact form{
+    width: 100%;
+    position:relative;
+    top:-75vh;
+    left:calc(90vw - 350px);
+    background-color: rgba(255, 255, 255, .75);
+    max-width: 350px;
+  }
+}

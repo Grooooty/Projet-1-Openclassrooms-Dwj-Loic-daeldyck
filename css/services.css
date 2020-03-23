@@ -1,0 +1,63 @@
+#services{
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
+}
+
+#services > div:nth-of-type(2) {
+    padding-top: 16rem;
+    background-image: url(../webagency_images/images/main-feature.png);
+    background-repeat: no-repeat;
+    background-size: auto 16rem;
+    background-position: center 0;
+}
+
+#services ul {
+    padding: 0 2rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+#services li {
+    text-align: justify;
+    padding:1rem;
+    display: flex;
+}
+
+#services li:before {
+   font: normal normal normal 14px/1 FontAwesome;
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50.5' cy='50.5' r='39' stroke='%23C4C4C4'/%3E%3Ccircle cx='90' cy='50' r='8.5' fill='%2300C2FF' stroke='white' stroke-width='3'/%3E%3C/svg%3E");
+   background-size:contain;
+   background-repeat: no-repeat;
+   background-position: top center;
+   color:var(--darkgrey);
+   position:relative;
+   font-size: 1rem;
+   padding: 1rem;
+}
+
+#services li:first-of-type:before {
+   content:"\f201";
+}
+
+#services li:nth-of-type(2):before {
+   content:"\f1b3";
+}
+
+#services li:nth-of-type(3):before {
+   content:"\f200"
+}
+
+#services h3 {
+    padding-left:.5rem;
+}
+
+@media screen and (min-width: 1024px){
+    #services > div:nth-of-type(2) {
+        padding-top:0;
+        padding-left:50%;
+        background-position: 0 center;
+        background-size: 50%;
+    }
+}

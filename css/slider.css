@@ -1,0 +1,145 @@
+#banniere_page, #services_page, #projets_page, #contact_page {
+    position: absolute;
+    left: 0;
+    top:-6.25em;
+    }
+
+
+#banniere {
+    height: calc( 100vh - 6.25em);
+    width: 100%;
+    margin-top: 6.25em;
+    /* position: relative; */
+    /* z-index: 4; */
+    overflow: hidden;
+    background: no-repeat scroll center 0/cover;
+    background-image: url(../webagency_images/images/slider/bg1.jpg);
+}
+
+#banniere > a {
+    display: none;
+}
+
+#banniere img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left:-9.375em;
+    filter: saturate(80%);
+    -webkit-filter: saturate(80%);
+}
+
+#banniere_description {
+    width: 80%;
+    color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+    height: 100%;
+}
+
+#banniere p {
+    font-size: 1em;
+    margin-bottom: 1.25em;
+    margin-top: 0;
+}
+
+#banniere_bandeau {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:0.25em;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#banniere_timeline {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 10%;
+    background-color:var(--mainblue);
+}
+
+#banniere_bouton_droite {
+    display: block;
+    /* position: absolute; */
+    /* top: 250px; */
+    /* right: 0; */
+    width: 2.1875em;
+    height:4.375em;
+    background-color: rgba(0,0,0,0.2);
+    border-bottom-left-radius: 4.375em;
+    border-top-left-radius: 4.375em;
+    font-size: 1.875em;
+}
+
+#banniere_bouton_gauche {
+    display: block;
+    width: 2.1875em;
+    height:4.375em;
+    background-color: rgba(0,0,0,0.2);
+    border-bottom-right-radius: 4.375em;
+    border-top-right-radius: 4.375em;
+    font-size:1.875em;
+}
+
+progress {
+  position: relative;
+  top: -1rem;
+  width: 100%;
+  height: .5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+progress[value]::-webkit-progress-value {
+  background-color:var(--mainblue);
+}
+
+@media all and (min-width:800px){
+    #banniere > a {
+        display: block;
+    }
+}
+
+@media all and (max-width:64em) {       
+    #slider, .slide {
+        height:34.375em; /* Slider plus petit */
+    }
+    .text_slide {
+        max-width:28.125em;
+    }
+}
+
+@media all and (max-width: 30em) {
+    
+    .body_slide {
+        height: 21.875em; /* Adaptation taille du slider */
+    }
+    
+    #slider, .slide {
+        height: 28.125em; /* Adaptation taille du slider */
+    }
+    
+    .body_slide nav {
+        display: none; /* Suppression fonction navigation du slider */
+    }
+}
+
+@media screen and (min-width: 48em) {
+  div#banniere {
+    background: no-repeat scroll center 0/cover;
+    background-image: url(../webagency_images/images/slider/bg1.jpg);
+    width: 100%;
+    height: calc(100vh - 6.25em);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

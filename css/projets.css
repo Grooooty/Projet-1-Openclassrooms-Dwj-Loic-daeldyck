@@ -1,0 +1,148 @@
+#projets {
+  background-color: var(--lightgrey);
+}
+
+#projets figure {
+    width: 90vw;
+    max-width: 20rem;
+    cursor: pointer;
+    margin: .5rem auto;
+}
+
+#projets figcaption {
+    display: none;
+    color : white;
+    background-color:rgba(0, 0, 0, .5);
+    height: 4rem;
+    position: relative;
+    margin-top: -5.2rem;
+    width: calc(100% - 1rem);
+    padding: 1rem 0 0 1rem;
+}
+
+#projets figcaption:before {
+    content:"\f06e";
+    font-family:FontAwesome;
+    background-color:var(--mainblue);
+    border-radius:50%;
+    position:absolute;
+    margin-left:75%;
+    margin-top:-2rem;
+    width:2rem;
+    height:2rem;
+    font-size:1.5rem;
+    text-align:center;
+    border:1px solid white;
+}
+
+#projets figure:hover figcaption {
+    display: flex;
+}
+
+#projets figure img{
+    width: 100%;
+}
+
+#projets #carousel {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc( 100% - 2rem);
+    margin: 1rem;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+#projets nav{
+}
+
+#projets nav ul{
+  background-color: var(--grey);
+  border-radius: .2rem;
+  display:flex;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  list-style-type: none;
+  width: fit-content;
+  margin: 1rem auto;
+}
+
+#projets nav ul li{
+  padding: .5rem;
+  cursor:pointer;
+}
+
+#projets nav ul li.active, #projets nav ul li:hover{
+  background-color: var(--mainblue);
+  color:white;
+  border-bottom: 2px solid var(--darkblue);
+}
+
+#projets nav ul li.active {
+	position: relative;
+	background: #88b7d5;
+}
+#projets nav ul li.active:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: var(--darkblue);
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+#projets nav ul li:first-of-type.active{
+  border-radius: .2rem 0 0 .2rem;
+}
+
+#projets nav ul a{
+  text-decoration: none;
+  color:var(--darkgrey);
+}
+
+#projets nav ul li a{
+  color:inherit;
+}
+
+@media screen and (min-width: 1024px) {
+  #projets #carousel {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #projets figure {
+      max-width: 250px;
+      min-width: initial;
+      margin-top: 2rem;
+  }
+
+
+}
+
+@media all and (min-width: 480px) {
+    #projets li:first-of-type {
+        border-radius: 5px 0 0 5px;
+    }
+    #projets li:last-of-type {
+        border-radius: 0 5px 5px 0;
+    }
+   
+    /* Mise en place du triangle bleu au survol du menu interne aux projets */
+    /*#projets li:hover::before, */
+    #projets .select::before {
+        content: '\0025BE';
+        color: rgb(70,140,173);
+        position: absolute;
+        top: 13px;
+        left: 25%;
+        font-weight: 900;
+        font-size: 45px;
+    }
+}
